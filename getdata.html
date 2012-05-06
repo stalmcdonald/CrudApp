@@ -1,0 +1,76 @@
+<!doctype html>
+<!-- Author: Crystal McDonald -->
+<!-- Class: ASD 1203 -->
+<!-- Activity: Project 2 -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>RSVP</title>
+<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Mobile IE needs ClearType for smoothing fonts -->
+<meta http-equiv="cleartype" content="on">
+<!-- StyleSheets under here -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.css"/>
+<link rel="stylesheet" href="css/ps/jquery-mobile.css"/>
+<link rel="stylesheet" href="css/style.css"/>
+<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & attend detects -->
+<script src="js/libs/modernizr.custom.min.js"></script>
+</head>
+<body>
+	
+<div data-role="page" id="home">
+<div id="cta1">
+			<a href="#home" id="displayData"><img src="images/images/RSVP_CTA.png" alt="get photo"/></a>
+		</div>
+	
+	<!-- /header -->
+	<div data-role="content" id="one">
+		<header>
+		<p>
+			Create your Guest List now!
+		</p>
+		</header>
+		
+		<div id="getdata" data-role="fieldcontain">
+				<div id="get-data-buttons">
+					<div class="ui-grid-b">
+						<p style="text-align: center;">Data Imported from CouchDB</p>
+						<div>
+							<a href="#" data-role="button" data-theme="b" id="jsonbutton">Couch</a>
+						</div>
+						
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="guestdata"></div>
+
+	</div>
+	<!-- /content -->
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#guestCouch" data-icon="grid">View</a></li>
+				<li><a href="#addguest" data-icon="plus">Submit</a></li>
+				
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+<!-- /page one -->
+				
+		
+<!-- JavaScript under here -->
+<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.js"></script>
+<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+<script type="text/javascript" src="xhr/guest.json"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script>getData();</script>
+</body>
+</html>

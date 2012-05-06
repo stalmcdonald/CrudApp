@@ -1,0 +1,51 @@
+<!doctype html>
+<!-- Author: Crystal McDonald -->
+<!-- Class: ASD 1203 -->
+<!-- Activity: Project 3 -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>RSVP</title>
+<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Mobile IE needs ClearType for smoothing fonts -->
+<meta http-equiv="cleartype" content="on">
+<!-- StyleSheets under here -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.css"/>
+<link rel="stylesheet" href="ps/jquery-mobile.css"/>
+<link rel="stylesheet" href="style.css"/>
+<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & attend detects -->
+<script src="modernizr.custom.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.js"></script>
+<script type="text/javascript" src="jquery.validate.min.js"></script>
+<script src="jquery.couch.js"></script>
+</head>
+<body>
+
+
+<!-- DATABASE -->
+<div data-role="page" id="guestlist">
+<div id="cta1">
+			<a href="index.html" id="contactImage"><img src="RSVP_CTA.png" alt="adding guest"/></a>
+		</div>
+	<div data-role="header" data-position='fixed'data-theme="c" >
+		<h1>Database</h1>
+	</div>
+	
+	<div data-role="content" class="ui-body-a">
+		<ul id="guestlist" data-role="listview">
+		</ul>
+	</div>
+</div>
+
+
+<!-- JavaScript under here -->
+<script type="text/javascript" src="JSON.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script>getData();</script>
+</body>
+</html>

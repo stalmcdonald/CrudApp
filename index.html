@@ -1,0 +1,177 @@
+<!doctype html>
+<!-- Author: Crystal McDonald -->
+<!-- Class: ASD 1203 -->
+<!-- Activity: Project 2 -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>RSVP</title>
+<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Mobile IE needs ClearType for smoothing fonts -->
+<meta http-equiv="cleartype" content="on">
+<!-- StyleSheets under here -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.css"/>
+<link rel="stylesheet" href="css/ps/jquery-mobile.css"/>
+<link rel="stylesheet" href="css/style.css"/>
+<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & attend detects -->
+<script src="js/libs/modernizr.custom.min.js"></script>
+</head>
+<body>
+
+
+<!-- Landing Page -->
+<div data-role="page" id="home">
+	<div id="cta1">
+			<a href="#home" id="contactImage"><img src="images/images/RSVP_CTA.png" alt="add guest"/></a>
+		</div>
+
+	<div data-role="header" data-theme="c" id="rsvpheader">
+		<h1 id="rsvp1">RSVP</h1>
+	</div>
+	 <!--   Categories  -->
+		<ul data-role="listview" >
+				<li><a href="#addguest">
+				<img src="images/add.png" >
+				<h3 style="text-align: left;">Create Guest</h3>
+				<p style="text-align:left;">
+					Add a Guest
+				</p>
+				</a></li>
+				<li><a href="#addguest" id="glist">
+				<img src="images/accept_page.png" >
+				<h3 style="text-align: left;">Guest List</h3>
+				<p style="text-align: left;">
+					Keep Track of RSVP's
+				</p>
+				</a></li>
+				<li><a href="getdata.html">
+				<img src="images/next.png" >
+				<h3 style="text-align: left;">Guest Lists</h3>
+				<p style="text-align: left;">
+					Imported Data
+				</p>
+				</a></li>
+		
+				
+		
+			
+			<div class="copyrightBar">
+
+		<p style="text-align: center;" class="copyrightNotice">&copy; 2012 Crystal McDonald</p>
+		<p style="text-align: center;" class="copyrightLinks">
+		<a data-mobilize="true" class="contact" href="/legal/legal_information.jsp">Contact Us</a> -
+		<a data-mobilize="true" class="legalPrivacy" href="/privacy/privacy_commitment.jsp">Privacy &amp; Security</a>
+		
+		</p>
+		<div id="clearlocal">
+			<p style="text-align: right;" id="clear"><a href="#home" onclick="clearLocal(); location.reload();">Clear Local Storage</a></p>
+		</div>
+	</div>
+	<!-- /end -->
+	</div>
+	
+<!-- Add Guest Page -->
+<div data-role="page" id="addguest">
+<div id="cta1">
+			<a href="#home" id="contactImage"><img src="images/images/RSVP_CTA.png" alt="add guest"/></a>
+		</div>
+	<div data-role="header" data-theme="c" id="headguest">
+		<h1 id="guestpage">Add a Guest</h1>
+	</div>
+	<!-- /header -->
+	<div data-role="content" class="content">
+		<!-- Drop Down Menu -->
+		<form action="" method="post" name="guestForm" id="guestForm">
+			<div id="guestGroup" data-role="fieldcontain">
+				<select id="guest" name="guest"  data-native-menu="false" >
+					<option data-placeholder="true">--Choose a Guest--</option>
+					<option value="Family">Family</option>
+					<option value="Friend">Friend</option>
+					<option value="Work">Work</option>
+					<option value="VIP">VIP</option>
+					<option value="Other">Other</option>
+				</select>
+			</div>
+			
+			<!-- Name Field -->
+			<div id="guestName" data-role="fieldcontain">
+				<label for="gname">Guest Name</label>
+				<input name="gname" type="text" id="gname" class="required"/>
+			</div>
+			
+			<!-- Photo -->
+			<div id="guestLabel" data-role="fieldcontain">
+				<label for="contact">Guest Photo</label>
+				<input name="contact" type="text" id="contact" class="required" />
+			</div>
+			
+			<!-- Calendar -->
+			<div id="rsvpDate" data-role="fieldcontain">
+				<label for="rdate">RSVP Date</label>
+				<input name="rdate" type="date" id="rdate" class="date required"/>
+				<small class="prompt">M/D/YYYY</small>
+			</div>
+			
+			<!-- Check Box -->
+			<div id="SignUp" data-role="fieldcontain">
+				<fieldset data-role="controlgroup">
+					<input type="checkbox" value="Yes" checked="checked" name="attend" id="attend"/><label for="attend">Attending?</label>
+				</fieldset>
+			</div>
+			
+			<!-- Slider -->
+			<div id="moreGuests" data-role="fieldcontain">
+				<label for="aguest">Additional Guest</label>
+				<input name="aguest" type="range" min="0" max="4" step="1" value="0" id="aguest"/>
+			</div>
+			
+			<!-- Text Area for Notes -->
+			<div id="guestNotes" data-role="fieldcontain">
+				<label for="gnotes">Guest Notes</label><br />
+				<textarea id="gnotes"></textarea>
+			</div>
+			
+			<!-- Submit and Reset Buttons -->
+			<div id="submitreset" data-role="fieldcontain">
+			<div id="submit-reset-buttons">
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<input type="submit" id="submit" class="addguestsubmit" value="Add Guest" data-theme="b" />
+					</div>
+					<div class="ui-block-b">
+						<input type="reset" id="reset" value="Reset Page" />	
+					</div>
+				</div>
+			</div>
+			<div id="edit-item-button" style="display: none;">
+				<input type="button" id="edit-item" value="Edit Item" />
+			</div>
+		</div>
+		</form>
+		
+		<div id="glist">
+		
+		</div>
+	
+	
+		<div id="clearlocal">
+			<p id="clear"><a href="#" onclick="clearLocal(); location.reload();">Clear Local Storage</a></p>
+		</div>
+
+	</div>
+<!-- /page addguest -->
+
+
+
+<!-- JavaScript under here -->
+<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.js"></script>
+<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/JSON.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script>getData();</script>
+</body>
+</html>

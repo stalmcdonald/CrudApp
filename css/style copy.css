@@ -1,0 +1,201 @@
+/*
+
+Title: RSVP
+By: Crystal McDonald
+For: ASD 1203
+Assignment: Project 2
+Term: 1203
+
+*/
+
+/* Make it look like an iPhone */
+body{
+	font-family: "Lucida Grande", "Arial", sans-serif;margin: auto;padding: 10px;
+}
+
+#cta{
+	width: 320px;
+}
+
+#site-wrapper{
+	background: url(../img/iphoneBG.jpg) no-repeat; 
+}
+
+/* Font normalization 
+ */
+
+body { 
+	font:12px//* 1.231 */; sans-serif; *font-size:small; 
+}
+select, input, textarea, button { 
+	font:99% sans-serif; 
+}
+
+textarea { overflow: auto; 
+} 
+
+/* Headers (h1, h2, etc)  */
+h1, h2, h3, h4, h5, h6 { 
+	font-weight: bold; 
+}
+
+.thumb {
+	background:images/images/RSVP_CTA.png no-repeat;  /* CTA Image */
+	width: 142px;
+	height: 115px;
+	float: right;
+	z-index: 2;
+	position: relative;
+}
+
+/*
+ * Primary styles
+ */
+
+body{
+	/* background: #2D1E44; */ text-align: center;font-family:  "HelveticaNeue-Light","HelveticaNeue",Helvetica,Arial,sans-serif; font-weight: light; 
+}
+
+
+/* text and links */
+
+p {
+	 color: #07586f;    /* dark cruelen  */
+}
+
+/* Headers*/
+h1 {
+	color: #7eba7c; font-size: 3em; margin: 0 0 32px 0; /* the green color */
+	font-family:  "HelveticaNeue-Light","HelveticaNeue",Helvetica,Arial,sans-serif; font-weight: lighter; 
+}
+
+a { 	
+	color: #040d12; text-decoration: none; /* the black color */
+}
+
+a:hover {
+	color:#a2b8b4; text-decoration: underline;  /* light gray */  /* hover for links */
+	
+}
+/* Buttons */
+.ui-btn-up-b {
+	background: #7ec042 !important;																	
+}
+.ui-btn-hover-b{
+	background: #07586f !important;
+}
+
+ 
+/* list styles */
+li{
+	list-style: none; color: #233f64; /* dark cruelen */
+}
+#glist {
+	color:#567984; /* dark gray */
+}
+
+	
+/* Navigation*/
+nav li a{
+	color: #233f64;
+nav li a:hover{
+	color: #a2b8b4;/* the black color */
+}
+nav li.here a:hover{
+	color: #fff; text-decoration: none;} /*home*/
+
+nav li.here + li a {
+	background: none ;padding: 10px 0 20px 8px;
+}
+
+
+
+[type = 'radio'] {
+	border: none; width: inherit;
+}
+ 
+span{
+	color: #002E44; /* dark blue-black */ /*  Will change footer color to white if not committed out. */
+
+}
+    
+#errors{
+ 	color: red;
+}
+
+/* Icons*/
+
+
+.ui-icon {
+	background-color: 						#a2b8b4; /* light gray */  /* bg color of the arrow and home icons */
+}
+
+/* checks,radios */
+.ui-checkbox .ui-icon {
+	background-color: 						#a2b8b4; /* light gray */ 
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+/* in-active state bg on checkbox & radio icons */
+.ui-icon-checkbox-off,
+.ui-icon-radio-off {
+	background-color:  #fff;
+}
+
+/* active state bg on checkbox & radio icons */
+.ui-checkbox-on .ui-icon,
+.ui-radio-on .ui-icon {
+	background-color: ##a2b8b4; /* light gray */  /* NOTE: this hex should match the active state color. It's repeated here for cascade */  
+}   
+/* Button colors */
+.ui-btn {
+	border: 2px solid 		#08738d; /* 2nd blue */
+	background: 			#FFF;
+}
+
+/* background color inside the drop down menu */
+.ui-btn-inner{
+	/* border: 1px solid 		#07586f; */
+	background: #EFEFEF;
+}
+
+/* labels */
+label.ui-select {
+	/* background-color: #fff; */
+}
+
+/* added from form3 ---------------------------------------------------------------------------------------------*/
+/* F bar theme - just for the headers */
+.ui-bar-f {
+	border: 2px solid 		#08738d;
+	background: #7ec042 !important;	
+}
+/* Buttons */
+.ui-btn-up-f {
+	background: #7ec042 !important;																	
+}
+
+
+}
+/* open errors link color changed on food form */
+#formerrorslink{
+	color: #07586f;
+}
+
+/* Red error message */
+label.error{
+	display: block; margin: 10 px 0; color: #cc0000;
+	font-size: 14px; 
+}
+
+/* Copyright footer */
+.copyrightBar{
+	Display: center;
+	font-size: x-small;
+}
+.refreshBar{
+	Display: center;
+	font-size: x-small;
+}
